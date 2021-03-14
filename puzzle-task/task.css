@@ -15,9 +15,10 @@
 
 .item {
   height: 250px;
-  width: calc(20% - 10px);
-  margin-bottom: 10px;
+  flex: 20%;
+  padding: 10px;
   perspective: 1000px;
+  box-sizing: border-box;
 }
 
 .item1 {
@@ -58,7 +59,7 @@
   width: 100%;
   height: 100%;
 }
-.item:hover .card-inner {
+.card-inner:hover {
   transform: rotateY(180deg);
 }
 .card-front,
@@ -76,10 +77,18 @@
   transform: rotateY(180deg);
 }
 
-.container:hover .card-front {
+.container:hover .card-inner{
+  transform: rotateY(180deg);
+}
+
+.container:hover .card-back{
   background-color: #999;
   background-image: url("../puzzle-task/SPRINTIVE.svg");
   background-size: 100px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.item:hover .card-inner{
+  transform: rotateY(0deg);
 }
