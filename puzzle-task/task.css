@@ -1,0 +1,82 @@
+.container {
+  width: 85%;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.item {
+  border: 1px solid #000;
+  height: 250px;
+  width: 20%;
+  margin: 10px;
+}
+
+.item1 {
+  background-color: red;
+}
+.item2 {
+  background-color: blue;
+}
+.item3 {
+  background-color: grey;
+}
+.item4 {
+  background-color: pink;
+}
+.item5 {
+  background-color: green;
+}
+
+.item6 {
+  background-color: black;
+}
+.item7 {
+  background-color: orange;
+}
+.item8 {
+  background-color: purple;
+}
+.item9 {
+  background-color: rebeccapurple;
+}
+.item10 {
+  background-color: yellow;
+}
+.card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.item:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.container:hover .card-front {
+  background-color: #999;
+  background-image: url("../puzzle-task/SPRINTIVE.svg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
